@@ -1,27 +1,8 @@
 import './style.css'
-import {add,subtract,multiply,divide} from "./mathFunctions"
-
-
-document.querySelector<HTMLDivElement>('#container')!.innerHTML = `
-  <div>
-  
-  </div>
-`
+import {add,subtract,multiply,divide,operate} from "./mathFunctions"
 
 //consider using a switch statement
-function operate(num1:number,opp:string,num2:number){
-  if(opp === "+"){
-      return add(num1,num2);
-  }else if(opp === "-"){
-      return subtract(num1,num2);
-  }else if (opp === "*"){
-      return multiply(num1,num2);
-  }else if (opp === "/"){
-      return divide(num1,num2);
-  }else{
-      console.log("Invalid Input");
-  }
-} 
+ 
 function addAttributes(button:HTMLButtonElement,content:string){
   button.classList.add("cButton");
   button.textContent = content
