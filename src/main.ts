@@ -1,5 +1,5 @@
 import './style.css'
-
+import {add,subtract,multiply,divide} from "./mathFunctions"
 
 
 document.querySelector<HTMLDivElement>('#container')!.innerHTML = `
@@ -7,18 +7,7 @@ document.querySelector<HTMLDivElement>('#container')!.innerHTML = `
   
   </div>
 `
-function add (num1:number, num2:number){
-  return num1 + num2;
-}
-function subtract(num1:number, num2:number){
-  return num1 - num2;
-}
-function multiply(num1:number,num2:number){
-  return num1 * num2;
-}
-function divide(num1:number,num2:number){
-  return num1/num2;
-}
+
 //consider using a switch statement
 function operate(num1:number,opp:string,num2:number){
   if(opp === "+"){
@@ -50,6 +39,7 @@ function addAttributes(button:HTMLButtonElement,content:string){
       case "*":
           button.setAttribute('id','multiply');
           button.classList.add("operator");
+          break;
       case "/":
           button.setAttribute('id', "divide");
           button.classList.add("operator");
@@ -73,8 +63,8 @@ function addAttributes(button:HTMLButtonElement,content:string){
 //simplifying code
 function createButton(content:string){
   let button = document.createElement('button');
-      //returns button obj with classes, id, and eventlisteners based on content
-      //all cButton, opperator for opp id for certain opps
+      //returns button obj with classes, id, and EventListener based on content
+      //all cButton, operators for opp id for certain operators
       //use classlist to do this
       button = addAttributes(button,content);
       return button;
@@ -123,7 +113,4 @@ container.appendChild(buttonContainer);
 
 // button Eventlistener
 const button = document.querySelectorAll('button');
-let num1:number;
-let opp:string;
-let num2:number;
-let num1Flag:boolean = false;
+
