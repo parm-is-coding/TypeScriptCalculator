@@ -1,1 +1,52 @@
 
+body{
+  display: flex;
+  justify-content: center;
+}
+#container {
+  border:solid;
+  width: 500px;
+  height: 700px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#screen {
+  border:solid;
+  margin-top: 20px;
+  height: 100px;
+  width:450px;
+}
+
+#buttonContainer {
+  width: 450px;
+  height:520px;
+  margin-top: 20px;
+  display:flex;
+  flex-wrap: wrap;
+  gap:30px;
+  padding-left: 25px;
+  
+  
+}
+
+.cButton{
+  font-size: 50px;
+  padding-right: 25px;
+  padding-left: 25px;
+  
+}
+/* #subtract, #multiply, #add, #equal{
+  padding-left: 32px;
+  padding-right: 32px;
+}
+#divide {
+  padding-left:35px;
+  padding-right:35px;
+}
+
+#dot {
+  padding-left:38px;
+  padding-right:38px;
+} */
