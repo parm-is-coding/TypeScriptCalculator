@@ -44,7 +44,9 @@ function createButton(content:string):HTMLButtonElement{
   }
 
   
-export function createButtons(buttonContainer:HTMLDivElement){
+export function createButtons(container:Element){
+    const buttonContainer:HTMLDivElement = document.createElement('div');
+    buttonContainer.setAttribute('id','buttonContainer');
     for (let i = 9; i >=0; i--){
         buttonContainer.appendChild(createButton(String(i)));
         if(i == 7){
@@ -64,6 +66,7 @@ export function createButtons(buttonContainer:HTMLDivElement){
     buttonContainer.appendChild(dot);
     buttonContainer.appendChild(equal);
     buttonContainer.appendChild(divide);
+    container.appendChild(buttonContainer);
 }
 
 export function createScreen(container:Element){

@@ -14,9 +14,7 @@ if(container == null){
 }
 createScreen(container);
 // add buttonContainer to Calculator
-const buttonContainer:HTMLDivElement = document.createElement('div');
-buttonContainer.setAttribute('id','buttonContainer');
-createButtons(buttonContainer);
+createButtons(container);
 container.appendChild(buttonContainer);
 
 
