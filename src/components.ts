@@ -65,3 +65,10 @@ export function createButtons(buttonContainer:HTMLDivElement){
     buttonContainer.appendChild(equal);
     buttonContainer.appendChild(divide);
 }
+
+export function createScreen(container:Element){
+    const screen = document.createElement("div");
+    screen.setAttribute('id',"screen");
+    container.appendChild(screen);
+  
+  }
